@@ -206,13 +206,13 @@
           });
       });
 
-      const socket = io("http://localhost:5000", {
+      // const socket = io("http://localhost:5000", {
+      //   autoConnect: false, // Don't connect automatically
+      // });
+
+      const socket = io("https://chatsocket-server-f59f.onrender.com", {
         autoConnect: false, // Don't connect automatically
       });
-
-      //   const socket = io("http://82.180.133.163:5016", {
-      //     autoConnect: false, // Don't connect automatically
-      //   });
 
       // Receive new individual message
       socket.on("individual", (msg) => {
